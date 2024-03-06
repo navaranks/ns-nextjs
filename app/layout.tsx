@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Source_Sans_3 } from "next/font/google";
 import "./globals.css";
-import MaxWidthWrapper from "@/components/max-width-wrapper";
+
 
 const inter = Source_Sans_3({ subsets: ["latin"] });
 
@@ -17,9 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <MaxWidthWrapper>
-        <body className={inter.className}>{children}</body>
-      </MaxWidthWrapper>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

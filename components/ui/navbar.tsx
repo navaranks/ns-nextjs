@@ -24,7 +24,7 @@ export default function navbar ({ bgColor = "bg-white"}) {
                     <div className="items-center flex-1 md:flex md:justify-end">
                         <ul className="items-center hidden space-x-6 md:flex">
                             {menus.map((item, idx) => (
-                                <li key={idx} className="text-white hover:text-indigo-500">
+                                <li key={idx} className="text-lg font-bold text-white hover:text-indigo-500">
                                     <Link href={item.path}>{item.title}</Link>
                                 </li>
                             ))}

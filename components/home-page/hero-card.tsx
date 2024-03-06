@@ -5,7 +5,7 @@ function HeroCard() {
   return (
     <Card className='px-4 py-5 text-center bg-red-400 border-none'>
         <CardContent className='p-0'>
-            <img src='https://placehold.co/1600x500/orange/white'></img>
+            <img src='https://placehold.co/1600x500/orange/white' className='mx-auto md:w-1/2'></img>
         </CardContent>
     </Card>
   )
