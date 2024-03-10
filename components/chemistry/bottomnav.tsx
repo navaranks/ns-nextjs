@@ -23,7 +23,7 @@ const BottomNav = () => {
     <div
       className={`fixed bottom-0 w-full py-3 md:py-5 z-10 bg-zinc-100 dark:bg-zinc-950 border-t dark:border-zinc-800 border-zinc-200 shadow-lg  ${navClass}`}
     >
-      <div className="flex flex-row items-center justify-around w-full bg-transparent">
+      <div className="flex flex-row items-center justify-around max-w-screen-xl px-4 mx-auto bg-transparent md:px-8">
         <Link href="/chem-home" className="relative flex flex-col items-center justify-center">
           {isHomeActive ? (
             <Home color="#DA4453" strokeWidth={3} size={32} />

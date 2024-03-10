@@ -27,7 +27,7 @@ export default function Navbar({ bgColor = "bg-white" }) {
   return (
     <nav className={`${bgColor} w-full border-b md:border-0`}>
       <div className="max-w-screen-xl px-4 mx-auto md:px-8">
-        <div className="flex items-center justify-between py-3 md:py-5">
+        <div className="flex items-center justify-between py-3 md:py-5 transform duration-500">
           <Link href="/">
             <h1 className="text-3xl font-bold text-white cursor-pointer">
               Test
