@@ -32,21 +32,21 @@ const BottomNav = () => {
           )}
           <span>Home</span>
         </Link>
-        <Link href="/chem-info" className="relative flex flex-col items-center justify-center">
+        <Link href="/chem-schedule" className="relative flex flex-col items-center justify-center">
           {isExploreActive ? (
             <Search color="#DA4453" strokeWidth={3} size={32} />
           ) : (
             <Search size={32} />
           )}
-          <span>Info</span>
+          <span>Schedule</span>
         </Link>
-        <Link href="/chem-schedule" className="relative flex flex-col items-center justify-center">
+        <Link href="/chem-info" className="relative flex flex-col items-center justify-center">
           {isNotificationsActive ? (
             <Bell color="#DA4453" strokeWidth={3} size={32} />
           ) : (
             <Bell size={32} />
           )}
-          <span>Schedule</span>
+          <span>Info</span>
         </Link>
         <Link href="/chem-handouts" className="relative flex flex-col items-center justify-center">
           {isMessagesActive ? (

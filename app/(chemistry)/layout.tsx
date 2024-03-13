@@ -7,7 +7,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <div className='flex flex-col min-h-screen md:overflow-hidden'>
         <Navbar bgColor='bg-[#DA4453]'/>
         <ChemHero />
-        <div className="flex-grow w-screen bg-[#F0F0F3] pb-24">{children}</div>
+        <div className=" bg-[#F0F0F3] pb-24">{children}</div>
         <BottomNav />
     </div>
     
