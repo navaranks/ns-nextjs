@@ -14,9 +14,9 @@ const BottomNav = () => {
 
   const {
     isHomeActive,
-    isExploreActive,
-    isNotificationsActive,
-    isMessagesActive,
+    isScheduleActive,
+    isInfoActive,
+    isHandoutsActive,
   } = useNavigation();
 
   return (
@@ -33,7 +33,7 @@ const BottomNav = () => {
           <span>Home</span>
         </Link>
         <Link href="/chem-schedule" className="relative flex flex-col items-center justify-center">
-          {isExploreActive ? (
+          {isScheduleActive ? (
             <Search color="#DA4453" strokeWidth={3} size={32} />
           ) : (
             <Search size={32} />
@@ -41,7 +41,7 @@ const BottomNav = () => {
           <span>Schedule</span>
         </Link>
         <Link href="/chem-info" className="relative flex flex-col items-center justify-center">
-          {isNotificationsActive ? (
+          {isInfoActive ? (
             <Bell color="#DA4453" strokeWidth={3} size={32} />
           ) : (
             <Bell size={32} />
@@ -49,7 +49,7 @@ const BottomNav = () => {
           <span>Info</span>
         </Link>
         <Link href="/chem-handouts" className="relative flex flex-col items-center justify-center">
-          {isMessagesActive ? (
+          {isHandoutsActive ? (
             <Mail color="#DA4453" strokeWidth={3} size={32} />
           ) : (
             <Mail size={32} />

@@ -1,4 +1,9 @@
-import { Accordion, AccordionContent, AccordionTrigger,AccordionItem } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionTrigger,
+  AccordionItem,
+} from "@/components/ui/accordion";
 import {
   Card,
   CardContent,
@@ -69,15 +74,21 @@ export default function cheminfo() {
           </div>
         </CardContent>
         <CardHeader className="py-4">
-        <p>
-          The schedule is updated every week through the website. There you will find the topics as well as the homework we will be completing throughout the week and their due dates. Copy them to your planner. The excuse of not knowing an assignment was due will not be accepted.
-        </p>
+          <p>
+            The schedule is updated every week through the website. There you
+            will find the topics as well as the homework we will be completing
+            throughout the week and their due dates. Copy them to your planner.
+            The excuse of not knowing an assignment was due will not be
+            accepted.
+          </p>
         </CardHeader>
       </Card>
       <Card className="max-w-screen-xl mx-auto">
         <CardHeader className="py-4">
           <p>
-          As mentioned above, you will need a separate binder <strong>ONLY</strong> for this class. You should have dividers with the following headings:
+            As mentioned above, you will need a separate binder{" "}
+            <strong>ONLY</strong> for this class. You should have dividers with
+            the following headings:
           </p>
         </CardHeader>
         <CardContent>
@@ -91,26 +102,50 @@ export default function cheminfo() {
         </CardContent>
         <CardHeader className="py-2">
           <p>
-          You should have a separate <mark className="bg-[#da4453] text-white px-2">"Completed Homework Folder"</mark> where you place your assignments ready to be turned in. You may use the front pocket of your binder for this, just make sure to label the pocket properly.
+            You should have a separate{" "}
+            <mark className="bg-[#da4453] text-white px-2">
+              "Completed Homework Folder"
+            </mark>{" "}
+            where you place your assignments ready to be turned in. You may use
+            the front pocket of your binder for this, just make sure to label
+            the pocket properly.
           </p>
         </CardHeader>
         <CardHeader className="py-2">
           <p>
-          The lecture notes for this class are made and distributed by the instructor. During class, your task will be to follow along and fill out the outline. This way, all your notes are in one place and if you’re absent, you know what notes to get. <strong>Guard these with your life.</strong>
+            The lecture notes for this class are made and distributed by the
+            instructor. During class, your task will be to follow along and fill
+            out the outline. This way, all your notes are in one place and if
+            you’re absent, you know what notes to get.{" "}
+            <strong>Guard these with your life.</strong>
           </p>
         </CardHeader>
         <CardContent>
-          <Accordion type="single" collapsible className="w-full">
+          <Accordion type="single" collapsible className="w-full" variant={'chem'}>
             <AccordionItem value="item-1">
               <AccordionTrigger>Message for Parents/Guardians</AccordionTrigger>
               <AccordionContent>
-                <p>School today is very different from how it was in the past, allowing for easier communication between teachers, parents and students. Ensuring the success of students is an equal team effort. Therefore it is important that you also keep track of what your child is doing in class to help keep them focused. Some recommendations are:</p>
+                <p>
+                  School today is very different from how it was in the past,
+                  allowing for easier communication between teachers, parents
+                  and students. Ensuring the success of students is an equal
+                  team effort. Therefore it is important that you also keep
+                  track of what your child is doing in class to help keep them
+                  focused. Some recommendations are:
+                </p>
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger>Message for Parents/Guardians</AccordionTrigger>
-              <AccordionContent>
-                <p>School today is very different from how it was in the past, allowing for easier communication between teachers, parents and students. Ensuring the success of students is an equal team effort. Therefore it is important that you also keep track of what your child is doing in class to help keep them focused. Some recommendations are:</p>
+            <AccordionItem className='border-[#da4453] bg-[#da4453]' value="item-2">
+              <AccordionTrigger className="bg-[#da4453] text-white rounded-lg">Message for Parents/Guardians</AccordionTrigger>
+              <AccordionContent className="bg-[#f4f4f4] border-none rounded-b-lg">
+                <p>
+                  School today is very different from how it was in the past,
+                  allowing for easier communication between teachers, parents
+                  and students. Ensuring the success of students is an equal
+                  team effort. Therefore it is important that you also keep
+                  track of what your child is doing in class to help keep them
+                  focused. Some recommendations are:
+                </p>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
