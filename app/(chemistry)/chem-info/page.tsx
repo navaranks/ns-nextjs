@@ -9,7 +9,9 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
+  CardTitle,
 } from "@/components/ui/card";
+import Link from "next/link";
 import React from "react";
 
 export default function cheminfo() {
@@ -47,7 +49,7 @@ export default function cheminfo() {
         </CardHeader>
         <CardContent className="flex flex-col md:flex-row">
           <div className="w-full pb-4 text-center md:pb-0">
-            <h1 className="text-2xl font-bold ">
+            <h1 className="text-2xl font-extrabold ">
               <mark className="bg-[#da4453] text-white px-2">Materials</mark>
             </h1>
             <ul className="inline-block text-left list-disc">
@@ -60,16 +62,15 @@ export default function cheminfo() {
             </ul>
           </div>
           <div className="w-full pt-4 text-center md:pt-0">
-            <h1 className="text-2xl font-bold ">
-              <mark className="bg-[#da4453] text-white px-2">Materials</mark>
+            <h1 className="text-2xl font-extrabold ">
+              <mark className="bg-[#da4453] text-white px-2">Course Policies</mark>
             </h1>
             <ul className="inline-block text-left list-disc">
-              <li>3-Ring Binder</li>
-              <li>Pencils/Pens</li>
-              <li>Colored Pencils</li>
-              <li>Ruler</li>
-              <li>Highlighters</li>
-              <li>Scientific Calculator</li>
+              <li>Arrive to class on time</li>
+              <li>Come to class ready to learn and with an open mind</li>
+              <li>Respect the speaker, whether it is myself or a classmate</li>
+              <li>Trust yourself to make mistakes</li>
+              <li>If things don't make sense, ask or seek help</li>
             </ul>
           </div>
         </CardContent>
@@ -121,10 +122,21 @@ export default function cheminfo() {
           </p>
         </CardHeader>
         <CardContent>
-          <Accordion type="single" collapsible className="w-full" variant={'chem'}>
-            <AccordionItem value="item-1">
-              <AccordionTrigger>Message for Parents/Guardians</AccordionTrigger>
-              <AccordionContent>
+          <Accordion
+            type="single"
+            collapsible
+            className="w-full space-y-2 bg-white"
+          >
+            <AccordionItem
+              className="rounded-lg border-chem bg-chem "
+              value="item-1"
+            >
+              <AccordionTrigger className="bg-chem text-white rounded-lg  hover:bg-[#e16975]">
+                <span className="flex-1 font-bold text-center">
+                  Message for Parents/Guardians
+                </span>
+              </AccordionTrigger>
+              <AccordionContent className="bg-[#f4f4f4] border border-chem rounded-b-lg p-4">
                 <p>
                   School today is very different from how it was in the past,
                   allowing for easier communication between teachers, parents
@@ -133,22 +145,182 @@ export default function cheminfo() {
                   track of what your child is doing in class to help keep them
                   focused. Some recommendations are:
                 </p>
+                <div className="p-4">
+                  <ul className="inline-block space-y-4 text-left list-disc">
+                    <li>Follow the website to know what your child is doing. This website was made for parents just as much as it was for students. Have your child help you navigate it</li>
+                    <li>Provide a time and space for your student to do work.</li>
+                    <li>Please do not wait until the end of the semester to see how your child is doing. Check in with your child at least every two weeks to see how they are doing in the class.</li>
+                    <li>You are welcome to contact me by email, phone or office hours. Please allow 24 hours for a response. If you have not heard from me in 24 hours, follow up emails are always appreciated.</li>
+                  </ul>
+                </div>
+                <p className="font-bold">
+                The success of your child requires equal team effort.
+                </p>
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem className='border-[#da4453] bg-[#da4453]' value="item-2">
-              <AccordionTrigger className="bg-[#da4453] text-white rounded-lg">Message for Parents/Guardians</AccordionTrigger>
-              <AccordionContent className="bg-[#f4f4f4] border-none rounded-b-lg">
+            <AccordionItem
+              className="rounded-lg border-chem bg-chem"
+              value="item-2"
+            >
+              <AccordionTrigger className="bg-chem text-white rounded-lg hover:bg-[#e16975]">
+                <span className="flex-1 font-bold text-center">
+                  Message for Students
+                </span>
+              </AccordionTrigger>
+              <AccordionContent className="bg-[#f4f4f4] border border-chem p-4 rounded-b-lg">
                 <p>
-                  School today is very different from how it was in the past,
-                  allowing for easier communication between teachers, parents
-                  and students. Ensuring the success of students is an equal
-                  team effort. Therefore it is important that you also keep
-                  track of what your child is doing in class to help keep them
-                  focused. Some recommendations are:
+                  I do not expect you to fully master material on your first
+                  try. We are going to learn together, make mistakes together,
+                  and grow together. What I expect from everyone is dedication.
+                  Mastery will not happen overnight. It is going to take time.
+                  If you need extra help, you can rewatch the lecture videos,
+                  create study groups with your peers or attend office hours.
+                  Remember that I am here to help you and will do everything
+                  that I can to provide plenty of opportunities to check for
+                  understanding and correct any misconceptions.
                 </p>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
+        </CardContent>
+      </Card>
+      <Card className="w-full max-w-screen-xl mx-auto ">
+        <CardHeader className="text-center">
+          <CardTitle className="text-2xl font-extrabold">
+            Frequently Asked Questions
+          </CardTitle>
+          <CardDescription className="text-chem">
+            Really, I get asked this often.
+          </CardDescription>
+          <CardDescription className="text-gray">
+            I get asked these questions a lot, so I made this small section to
+            help you out identifying what you need faster.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Accordion
+            type="single"
+            collapsible
+            className="w-full space-y-2 bg-white"
+          >
+            <AccordionItem value="item-1">
+              <AccordionTrigger className="font-bold">
+                Schoology doesnt show a percentage. How do I know what my grade
+                is for the class?
+              </AccordionTrigger>
+              <AccordionContent className="space-y-4">
+                <p>
+                  The class follows the mastery grading rubric, meaning you not
+                  only need to know the material, but be able to apply it to
+                  different situations in order to be successful in the class.
+                  For this reason, Schoology does not show a percentage, just
+                  the letter grade.
+                </p>
+                <p>
+                  Please read the Mastery Grading Rubric from our syllabus to
+                  see how your letter grade is calculated.
+                </p>
+                <p>
+                  <strong>Note:</strong>Assignments, such as quizzes/labs/exams,
+                  will have more weight and be worth more than one assignment.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger className="font-bold">
+                What are my responsibilities as a student?
+              </AccordionTrigger>
+              <AccordionContent>
+                <p>
+                  You must have your homework ready to be turned in when you
+                  arrive to class. Do not think you may spend 15 minutes or even
+                  15 seconds looking for where you have put it, finishing one
+                  question, stapling pages together or even writing your name on
+                  it. Work is due when you arrive in the room. The same concept
+                  applies to bringing the materials, calculators and tools that
+                  are necessary for you to do your job, the job of being a
+                  student. Remember that while you are in my course, my
+                  objective is to prepare you for the real world and the
+                  consequences you will face will be of the same level as those
+                  in the real world. If you come without your tools, you cannot
+                  work and hence will not be paid that day. You will not receive
+                  credit for the work assigned or collected that day
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger className="font-bold">
+                Is cheating allowed?
+              </AccordionTrigger>
+              <AccordionContent>
+                <p>
+                  Cheating of any type will not be tolerated. If you are caught
+                  or suspected of cheating on a homework, lab or test you will
+                  be subjected to the schools cheating policy to the fullest
+                  extent. The burden of proof does not lie with the instructor
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-4">
+              <AccordionTrigger className="font-bold">
+                Are there any extra credit oppurtunites?
+              </AccordionTrigger>
+              <AccordionContent>
+                <p>
+                  There is no extra credit given. It is the student’s
+                  responsibility to correct any assignments.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-5">
+              <AccordionTrigger className="font-bold">
+                Is there tutoring for this class?
+              </AccordionTrigger>
+              <AccordionContent className="space-y-4">
+                <p>
+                  Tutoring is time meant for students to ask questions, aide
+                  students, or simply talk to parents and students. I encourage
+                  everyone to attend tutoring. Tutoring is available every day
+                  before school, on Schoology, and after school on specific
+                  days.
+                </p>
+                <p>
+                  <strong>Note:</strong>You may need a pass to attend tutoring
+                  before school. Let me know before hand so that I can provide
+                  one for you.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </CardContent>
+      </Card>
+      <Card className="w-full max-w-screen-xl mx-auto ">
+        <CardHeader>
+          <CardTitle className="text-2xl font-extrabold text-center text-chem">
+            Useful Handouts
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="flex flex-col md:mb-0 md:flex-row">
+          <Link
+            href={"/"}
+            className="w-full px-5 py-4 transition-colors border border-transparent rounded-lg "
+          >
+            <img
+              src="https://placehold.co/500x500/DA4453/white"
+              className="mx-auto w-36"
+            />
+            <p className="pt-4 font-bold text-center">Syllabus</p>
+          </Link>
+          <Link
+            href={"/"}
+            className="w-full px-5 py-4 transition-colors border border-transparent rounded-lg "
+          >
+            <img
+              src="https://placehold.co/500x500/4A89DC/white"
+              className="mx-auto w-36 "
+            />
+            <p className="pt-4 font-bold text-center">Lab Safety Contract</p>
+          </Link>
         </CardContent>
       </Card>
     </main>

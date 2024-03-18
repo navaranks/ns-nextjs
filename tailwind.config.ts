@@ -19,6 +19,7 @@ const config = {
     },
     extend: {
       colors: {
+        chem:"hsl(354, 67.0%, 56.1%)",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
