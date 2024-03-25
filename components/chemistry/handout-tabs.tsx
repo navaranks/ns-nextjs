@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem, SelectGroup, SelectLabel } from "../ui/select";
 
+
 interface TabData {
     id: number;
     title: string;
@@ -41,11 +42,12 @@ const HandoutTabs: React.FC<HandoutTabsProps> = ({ tabsData, borderColor }) => {
                 {tabsData.map((tab) => (
                     <button
                         key={tab.id}
-                        className={`px-4 py-5 hover:bg-chem/20 hover:rounded-lg  ${value === tab.id ? 'font-extrabold ' : ''}`}
+                        className={`px-4 py-5 hover:bg-chem/20 hover:animate-pulse hover:rounded-lg  ${value === tab.id ? 'font-extrabold ' : ''}`}
                         onClick={() => handleChange(tab.id)}
                     >
                         {tab.title}
                     </button>
+                    
                 ))}
             </div>
 
