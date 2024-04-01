@@ -1,0 +1,270 @@
+[
+  {
+    "id": 0,
+    "title": "Unit 1",
+    "subtitle": "Metrics",
+    "handouts": [
+      {"title": "Unit 1 Lecture Notes", "url": ""},
+      {"title": "Proper Observations", "url": ""},
+      {"title": "Instructions for Typing Special Characters", "url": ""},
+      {"title": "Density of Water Lab", "url": ""},
+      {"title": "Metric Prefixes Handout", "url": ""},
+      {"title": "Metric #1", "url": ""},
+      {"title": "Metric #2", "url": ""},
+      {"title": "Metric #3", "url": ""},
+      {"title": "Significant Digits Rules", "url": ""},
+      {"title": "Math for Chemistry", "url": ""},
+      {"title": "Math for Chemistry #2", "url": ""},
+      {"title": "Density Problems", "url": ""},
+      {"title": "Density Lab", "url": ""},
+      {"title": "Aluminum Foil Lab", "url": ""},
+      {"title": "Graphing With Excel", "url": ""},
+      {"title": "How to Make a Good Science Graph", "url": ""},
+      {"title": "RTQ#1 (Read the Question)", "url": ""},
+      {"title": "RTQ#2 (Read the Question)", "url": ""},
+      {"title": "RTG (Read the Graph)", "url": ""},
+      {"title": "The Art of Solving Problems", "url": ""}
+    ]
+  },
+  {
+    "id": 1,
+    "title": "Unit 2",
+    "subtitle": "Matter",
+    "handouts": [
+      {"title": "Unit 2 Lecture Notes", "url": ""},
+      {"title": "Matter Homework", "url": ""},
+      {"title": "Paper Chromatography Lab", "url": ""},
+      {"title": "Four Liquids Lab", "url": ""},
+      {"title": "Nomenclature Simplified", "url": ""},
+      {"title": "Formula Grid Homework #1", "url": ""},
+      {"title": "Formula Grid Homework #2", "url": ""},
+      {"title": "Formula Grid Homework #3", "url": ""},
+      {"title": "Formula Grid Homework #4", "url": ""},
+      {"title": "Chemical Formulas and Nomenclature Homework #1", "url": ""},
+      {"title": "Chemical Formulas and Nomenclature Homework #2", "url": ""},
+      {"title": "Chemical Formulas and Nomenclature Homework #3", "url": ""},
+      {"title": "Chemical Change Lab", "url": ""}
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Unit 3",
+    "subtitle": "Chemical Reactions",
+    "handouts": [
+      {"title": "Unit 3 Lecture Notes", "url": ""},
+      {"title": "Classes of Chemical Reactions", "url": ""},
+      {"title": "Balancing Equations #1", "url": ""},
+      {"title": "Balancing Equations #2", "url": ""},
+      {"title": "Balancing Equations #3", "url": ""},
+      {"title": "Worksheet of Word Equations", "url": ""},
+      {"title": "Lab for Balancing with Models", "url": ""},
+      {"title": "Reaction Prediction Homework #1", "url": ""},
+      {"title": "Reaction Prediction Homework #2", "url": ""},
+      {"title": "Reaction Prediction Homework #3", "url": ""},
+      {"title": "Activity Series Lab", "url": ""},
+      {"title": "Precipitation Homework", "url": ""},
+      {"title": "Precipitation Homework", "url": ""},
+      {"title": "Precipitate Lab", "url": ""}
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Unit 4",
+    "subtitle": "Stoichiometry and The Mole",
+    "handouts": [
+        {"title": "Unit 4 Lecture Notes", "url": ""},
+        {"title": "Molar Mass Problems", "url": ""},
+        {"title": "Simple Mole Chart", "url": ""},
+        {"title": "Simple Roadmap Problems", "url": ""},
+        {"title": "Simple Roadmap Problems #2", "url": ""},
+        {"title": "Formula Problems", "url": ""},
+        {"title": "Counting Atoms Lab", "url": ""},
+        {"title": "Moles of Iron and Copper Lab", "url": ""},
+        {"title": "Molarity Worksheet", "url": ""},
+        {"title": "Molarity #2", "url": ""},
+        {"title": "Mole Ratio Homework", "url": ""},
+        {"title": "Mole Ratio #2", "url": ""},
+        {"title": "Mole Ratio Lab", "url": ""},
+        {"title": "Moles and Mass in a Chemical Reaction Lab", "url": ""},
+        {"title": "Excess Reactant Lab", "url": ""},
+        {"title": "Roadmap Problems #1", "url": ""},
+        {"title": "More Roadmap Problems", "url": ""},
+        {"title": "Roadmap Problems #2 Limiting and Excess Reactants", "url": ""},
+        {"title": "Roadmap Problems #3 Reactions in Solution", "url": ""}
+    ]
+},
+{
+    "id": 4,
+    "title": "Unit 5",
+    "subtitle": "Atomic Structure",
+    "handouts": [
+        {"title": "Unit 5 Lecture Notes", "url": ""},
+        {"title": "A History of Atomic Structure on Postage Stamps", "url": ""},
+        {"title": "The Quantum Story on Postage Stamps", "url": ""},
+        {"title": "Atomic Structure #1", "url": ""},
+        {"title": "Atomic Structure #2", "url": ""},
+        {"title": "Waves #1", "url": ""},
+        {"title": "Electromagnetic Spectrum Worksheet", "url": ""},
+        {"title": "Electromagnetic Spectrum Worksheet #2", "url": ""},
+        {"title": "The Bohr Model", "url": ""},
+        {"title": "The Bohr Model for Regular Chemistry", "url": ""},
+        {"title": "Isotope Lab", "url": ""},
+        {"title": "Aufbau Chart", "url": ""},
+        {"title": "Spectra Lab", "url": ""},
+        {"title": "Review Questions on Light", "url": ""}
+    ]
+},
+{
+    "id": 5,
+    "title": "Unit 6",
+    "subtitle": "The Periodic Table",
+    "handouts": [
+        {"title": "Unit 6 Lecture Notes", "url": ""},
+        {"title": "Periodicity Homework #1", "url": ""},
+        {"title": "Periodicity Homework #2", "url": ""},
+        {"title": "Elements Lab", "url": ""},
+        {"title": "Periodic Table Videos Lab", "url": ""}
+    ]
+},
+{
+    "id": 6,
+    "title": "Unit 7",
+    "subtitle": "Bonding and Lewis Structures",
+    "handouts": [
+        {"title": "Unit 7 Lecture Notes", "url": ""},
+        {"title": "Bonding Homework", "url": ""},
+        {"title": "Lewis Dots #1: Basic Structure", "url": ""},
+        {"title": "Lewis Dots #2: VSEPR Theory", "url": ""},
+        {"title": "Lewis Dots #3: Dipole Moments", "url": ""},
+        {"title": "Intermolecular Forces", "url": ""},
+        {"title": "Shapes of Molecules", "url": ""},
+        {"title": "Model Building Lab", "url": ""},
+        {"title": "Hydrogen Bonding Lab", "url": ""}
+    ]
+},
+{
+    "id": 7,
+    "title": "Unit 8",
+    "subtitle": "Gases",
+    "handouts": [
+        {"title": "Unit 8 Lecture Notes", "url": ""},
+        {"title": "Graphical Analysis Lab", "url": ""},
+        {"title": "All Gas Law Problems", "url": ""},
+        {"title": "Boyle's Law CBL Lab", "url": ""},
+        {"title": "Absolute Zero Lab", "url": ""},
+        {"title": "Chemical Properties of Gases Lab", "url": ""}
+    ]
+},
+{
+    "id": 8,
+    "title": "Unit 9",
+    "subtitle": "Kinetics",
+    "handouts": [
+        {"title": "Unit 9 Lecture Notes", "url": ""},
+        {"title": "Kinetics Homework #1", "url": ""},
+        {"title": "Kinetics Homework #2", "url": ""},
+        {"title": "Kinetics Homework #3", "url": ""},
+        {"title": "Kinetics Homework #4", "url": ""},
+        {"title": "Vinegar Lab", "url": ""},
+        {"title": "Reaction Rates Lab", "url": ""},
+        {"title": "Iodine Clock Lab", "url": ""}
+    ]
+},
+{
+    "id": 9,
+    "title": "Unit 10",
+    "subtitle": "Equilibrium",
+    "handouts": [
+        {"title": "Unit 10 Lecture Notes", "url": ""},
+        {"title": "Le Chetalier's Principle Homework #1", "url": ""},
+        {"title": "Le Chetalier's Principle Homework #2", "url": ""},
+        {"title": "Le Chetalier's Principle Lab", "url": ""},
+        {"title": "Equilibrium Practice #1", "url": ""},
+        {"title": "Equilibrium Practice #2", "url": ""},
+        {"title": "The ICE Box", "url": ""}
+    ]
+},
+{
+    "id": 10,
+    "title": "Unit 11",
+    "subtitle": "Acids and Bases",
+    "handouts": [
+        {"title": "Unit 11 Lecture Notes", "url": ""},
+        {"title": "Conjugate Acids and Bases", "url": ""},
+        {"title": "Acid Base Names", "url": ""},
+        {"title": "pH Practice #1", "url": ""},
+        {"title": "pH Practice #2", "url": ""},
+        {"title": "pH Practice #3", "url": ""},
+        {"title": "pH Lab", "url": ""},
+        {"title": "Neutralization Questions", "url": ""},
+        {"title": "Weak Acid Practice Problems", "url": ""},
+        {"title": "Acid Dissociation Constant Lab", "url": ""},
+        {"title": "Microtitration of Acetic Acid", "url": ""},
+        {"title": "Titration Problems #1", "url": ""},
+        {"title": "Titration Problems #2", "url": ""},
+        {"title": "Titration Lab Experiment", "url": ""}
+    ]
+},
+{
+    "id": 11,
+    "title": "Unit 12",
+    "subtitle": "Thermodynamics",
+    "handouts": [
+        {"title": "Unit 12 Lecture Notes", "url": ""},
+        {"title": "Heat Problems #1", "url": ""},
+        {"title": "Heat Problems #2", "url": ""},
+        {"title": "Phase Change Worksheet", "url": ""},
+        {"title": "Heating Curve Lab", "url": ""},
+        {"title": "Phase Change Lab Heat of Fusion", "url": ""},
+        {"title": "Hess's Law Problems #1", "url": ""},
+        {"title": "Hess's Law Problems #2", "url": ""},
+        {"title": "Hess's Law Lab", "url": ""},
+        {"title": "Thermochemistry Vocabulary Assignment", "url": ""},
+        {"title": "Predicting Thermodynamic Change", "url": ""}
+    ]
+},
+{
+    "id": 12,
+    "title": "Unit 13",
+    "subtitle": "Electrochemistry",
+    "handouts": [
+        {"title": "Unit 13 Lecture Notes", "url": ""},
+        {"title": "Redox Homework #1 'Reactions'", "url": ""},
+        {"title": "Redox Homework #2 'Reactions in Acid'", "url": ""},
+        {"title": "Redox Homework #3 'Reactions in Bases'", "url": ""},
+        {"title": "Redox Homework #4 'Electrochemical Cells'", "url": ""},
+        {"title": "Redox Agents Labs", "url": ""},
+        {"title": "Electrochemical Cell Lab", "url": ""}
+    ]
+},
+{
+    "id": 13,
+    "title": "Unit 14",
+    "subtitle": "Organic Chemistry",
+    "handouts": [
+        {"title": "Unit 14 Lecture Notes", "url": ""},
+        {"title": "Functional Group Handout", "url": ""},
+        {"title": "Identifying Functional Groups", "url": ""},
+        {"title": "Organic Nomenclature", "url": ""},
+        {"title": "Organic Nomenclature #2", "url": ""},
+        {"title": "Organic Reactions #1", "url": ""},
+        {"title": "Organic Reactions #2", "url": ""},
+        {"title": "Functional Groups Lab", "url": ""},
+        {"title": "Isomer Lab", "url": ""},
+        {"title": "Synthesis of Esters Lab", "url": ""},
+        {"title": "Organic Reactions Lab", "url": ""}
+    ]
+},
+{
+    "id": 14,
+    "title": "Unit 15",
+    "subtitle": "Nuclear Chemistry",
+    "handouts": [
+        {"title": "Unit 15 Lecture Notes", "url": ""},
+        {"title": "Decay Equations", "url": ""},
+        {"title": "Half Life Questions", "url": ""},
+        {"title": "Half Life of a Penny Lab", "url": ""}
+    ]
+}
+
+]

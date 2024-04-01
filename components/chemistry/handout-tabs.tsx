@@ -6,7 +6,7 @@ interface TabData {
     id: number;
     title: string;
     subtitle: string;
-    content: string;
+    content: React.ReactNode;
 }
 
 interface HandoutTabsProps {
@@ -42,7 +42,7 @@ const HandoutTabs: React.FC<HandoutTabsProps> = ({ tabsData, borderColor }) => {
                 {tabsData.map((tab) => (
                     <button
                         key={tab.id}
-                        className={`px-4 py-5 hover:bg-chem/20 hover:animate-pulse hover:rounded-lg  ${value === tab.id ? 'font-extrabold ' : ''}`}
+                        className={`px-4 py-5 w-24 flex-grow justify-center hover:rounded-lg hover:bg-red-50 hover:via-red-900 hover:to-red-800 active:shadow-[-1px_0px_1px_0px_#b7323f_inset,1px_0px_1px_0px_#b7323f_inset,0px_0.125rem_1px_0px_#c73a4d_inset]  ${value === tab.id ? 'font-extrabold ' : ''}`}
                         onClick={() => handleChange(tab.id)}
                     >
                         {tab.title}
@@ -50,6 +50,7 @@ const HandoutTabs: React.FC<HandoutTabsProps> = ({ tabsData, borderColor }) => {
                     
                 ))}
             </div>
+           
 
             {/* Mobile Selector */}
             <Select value={tabsData[value].id.toString()} onValueChange={(val: string) => handleChange(parseInt(val))}>

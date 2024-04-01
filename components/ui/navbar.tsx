@@ -17,7 +17,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "./card";
 export default function Navbar({ bgColor = "bg-white" }) {
   const menus = [
     { icon: <HomeIcon />, title: "Home", path: "/" },
-    { icon: <FlaskRoundIcon />, title: "Chemistry", path: "/chemistry" },
+    { icon: <FlaskRoundIcon />, title: "Chemistry", path: "/chem-home" },
     { icon: <SatelliteIcon />, title: "Physics", path: "/physics" },
     { icon: <UserIcon />, title: "About Me", path: "/about" },
   ];
