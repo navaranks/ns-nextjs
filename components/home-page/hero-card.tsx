@@ -3,9 +3,9 @@ import { Card, CardContent } from '../ui/card'
 
 function HeroCard() {
   return (
-    <Card className='px-4 py-5 text-center bg-red-400 border-none'>
+    <Card className=' text-center bg-transparent border-none'>
         <CardContent className='p-0'>
-            <img src='https://placehold.co/1600x500/orange/white' className='mx-auto md:w-1/2'></img>
+            <video src='/images/logo2.webm' autoPlay muted loop  className='mx-auto md:w-1/2' />
         </CardContent>
     </Card>
   )

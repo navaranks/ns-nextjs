@@ -1,17 +1,30 @@
-import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import Schedule from '@/components/ui/schedule'
-import ScheduleCard from '@/components/ui/schedule-card'
-import React from 'react'
-import scheduleData from './fallschedule.json'
+"use client";
 
+import React, { useState, useEffect } from 'react';
+import Schedule, { ScheduleData } from '@/components/ui/schedule'; // Import Schedule and ScheduleData
+import ScheduleCard from '@/components/ui/schedule-card';
 
-export default function chemschedule() {
-  
-  return (
-    
-    <main className='flex flex-col px-4 gap-y-4'>
-      <ScheduleCard />
-      <Schedule scheduleData={scheduleData}/>
-    </main>
-  )
+export default function ChemSchedule() {
+    const [scheduleData, setScheduleData] = useState<ScheduleData[] | null>(null);
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        fetch('https://script.google.com/macros/s/AKfycbyBJflG-O8fhVoL0xWQc2vYO2vKRAREP-Bbp6TQ9B0rH2aRtIP1czWJcHqwt68z1IphSg/exec')
+            .then(response => response.json())
+            .then(data => {
+                setScheduleData(data); // Ensure the API returns data in the expected format
+                setIsLoading(false);
+            })
+            .catch(error => {
+                console.error('Error fetching schedule:', error);
+                setIsLoading(false); // Ensure loading state is updated even on error
+            });
+    }, []);
+
+    return (
+        <main className='flex flex-col px-4 gap-y-4'>
+            <ScheduleCard />
+            <Schedule isLoading={isLoading} scheduleData={scheduleData}/>
+        </main>
+    );
 }

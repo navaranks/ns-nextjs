@@ -10,7 +10,8 @@ export interface ScheduleDay {
 }
 
 interface ScheduleProps {
-  scheduleData: ScheduleData[];
+  scheduleData: ScheduleData[] | null;
+  isLoading: boolean;
 }
 export interface ScheduleData {
   tableid: number;
@@ -18,11 +19,11 @@ export interface ScheduleData {
   days: ScheduleDay[];
 }
 
-function Schedule({ scheduleData }: ScheduleProps) {
+function Schedule({ isLoading,scheduleData }: ScheduleProps) {
   return (
     <Card className="max-w-screen-xl w-full mx-auto">
         <CardContent className='p-4'>
-            <ScheduleTabs scheduleData={scheduleData} />
+            <ScheduleTabs isLoading={isLoading} scheduleData={scheduleData} />
         </CardContent>
     </Card>
   )

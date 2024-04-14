@@ -7,7 +7,7 @@ function IntroMessage() {
         <Card className='max-w-screen-xl mx-auto'>
             <CardContent className='flex flex-col md:flex-row px-4 py-3'>
                 <div className='mx-auto p-2'>
-                    <img src="/cintro.jpg" className=' max-w-xs' alt="demo" />
+                    <img src="/images/cintro.jpg" className=' max-w-xs' alt="demo" />
                 </div>
                 <div className='w-full m-auto px-5'>
                     <h1 className='text-3xl font-bold text-center py-2'> WELCOME CLASS OF 2023-2024</h1>

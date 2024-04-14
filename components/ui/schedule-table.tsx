@@ -13,21 +13,21 @@ const ScheduleTable: React.FC<ScheduleTableProps> = ({ days }) => {
 
   return (
     <Table>
-      <TableHeader className='hidden md:display'>
-        <TableRow>
-          <TableHead>Weekday</TableHead>
-          <TableHead>Date</TableHead>
-          <TableHead>Class Topic</TableHead>
-          <TableHead>Homework</TableHead>
+      <TableHeader>
+        <TableRow className='border-none md:border-b'>
+          <TableHead className='hidden md:table-cell bg-gray-900 text-white text-center'>Weekday</TableHead>
+          <TableHead className='hidden md:table-cell bg-gray-900 text-white text-center'>Date</TableHead>
+          <TableHead className='hidden md:table-cell bg-gray-900 text-white text-center'>Class Topic</TableHead>
+          <TableHead className='hidden md:table-cell bg-gray-900 text-white text-center'>Homework</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
         {days.map((day, index) => (
           <TableRow key={index}>
-            <TableCell>{day.Weekday}</TableCell>
-            <TableCell>{day.Date}</TableCell>
-            <TableCell>{day['Class Topic']}</TableCell>
-            <TableCell>{day.Homework}</TableCell>
+            <TableCell className='block md:table-cell text-center font-bold'>{day.Weekday}</TableCell>
+            <TableCell className='block md:table-cell text-center font-bold'>{day.Date}</TableCell>
+            <TableCell className='block md:table-cell text-center'>{day['Class Topic']}</TableCell>
+            <TableCell className='block md:table-cell text-center'>{day.Homework}</TableCell>
           </TableRow>
         ))}
       </TableBody>
