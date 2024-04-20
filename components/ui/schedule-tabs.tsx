@@ -57,8 +57,8 @@ export default function ScheduleTabs({ isLoading, scheduleData }: ScheduleTabsPr
         <TabsTrigger value='fall' className='w-full text-xl data-[state=active]:bg-chem'>Fall</TabsTrigger>
       </TabsList>
       <TabsContent value='spring'>
-        {selectedTab === 'spring' && scheduleData.map((schedule, index) => (
-          <ScheduleAccordion key={index} schedule={schedule} isLast={index === scheduleData.length - 1} />
+        {selectedTab === 'spring' && scheduleData.slice().reverse().map((schedule) => (
+          <ScheduleAccordion key={schedule.tableid} schedule={schedule} isLast={schedule.tableid === scheduleData[scheduleData.length - 1].tableid} />
         ))}
       </TabsContent>
       <TabsContent value="fall">

@@ -217,7 +217,7 @@ export default function cheminfo() {
                   the letter grade.
                 </p>
                 <p>
-                  Please read the Mastery Grading Rubric from our syllabus to
+                  Please read the <a href="/images/grades.jpg" className=" text-chem hover:underline hover:decoration-wavy">Mastery Grading Rubric</a> from our syllabus to
                   see how your letter grade is calculated.
                 </p>
                 <p>
@@ -302,21 +302,21 @@ export default function cheminfo() {
         </CardHeader>
         <CardContent className="flex flex-col md:mb-0 md:flex-row">
           <Link
-            href={"/"}
+            href={"/chemistry/Syllabus/Honors_Chemistry_Syllabus_2023_2024.pdf"}
             className="w-full px-5 py-4 transition-colors border border-transparent rounded-lg "
           >
             <img
-              src="https://placehold.co/500x500/DA4453/white"
+              src="/images/syllabus.png"
               className="mx-auto w-36"
             />
             <p className="pt-4 font-bold text-center">Syllabus</p>
           </Link>
           <Link
-            href={"/"}
+            href={"/chemistry/Syllabus/Lab_Safety_Contract.pdf"}
             className="w-full px-5 py-4 transition-colors border border-transparent rounded-lg "
           >
             <img
-              src="https://placehold.co/500x500/4A89DC/white"
+              src="/images/safety.png"
               className="mx-auto w-36 "
             />
             <p className="pt-4 font-bold text-center">Lab Safety Contract</p>
