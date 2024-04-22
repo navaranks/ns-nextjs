@@ -8,11 +8,13 @@ import {
   HomeIcon,
   MenuIcon,
   SatelliteIcon,
+  SunIcon,
   UserIcon,
 } from "lucide-react";
 import { Drawer, DrawerContent, DrawerTrigger } from "./ui/drawer";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Switch } from "./ui/switch";
 
 export default function MainNav({ bgColor = "bg-white" }) {
   const menus = [
@@ -71,7 +73,7 @@ export default function MainNav({ bgColor = "bg-white" }) {
                   <MenuIcon color="white" />
                 </button>
               </DrawerTrigger>
-              <DrawerContent className="p-4">
+              <DrawerContent className="p-4 justify-between">
                 <Card className="drop-shadow-lg border-none">
                   <CardHeader>
                     <CardTitle>Navigation</CardTitle>
@@ -99,6 +101,17 @@ export default function MainNav({ bgColor = "bg-white" }) {
                         </li>
                       ))}
                     </ul>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardContent>
+                    <div className="flex items-center justify-between ">
+                      <div className="flex items-center ">
+                        <SunIcon color="yellow"  />
+                        <span className="ml-2">Dark Mode</span>
+                      </div>
+                      <Switch />
+                    </div>
                   </CardContent>
                 </Card>
               </DrawerContent>

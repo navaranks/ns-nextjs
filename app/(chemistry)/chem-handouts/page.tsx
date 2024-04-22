@@ -1,11 +1,14 @@
-"use client";
 
 import React from 'react';
 import HandoutTabs from '@/components/chemistry/handout-tabs';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import UnitTable from './(handouts)/UnitTable';
 import unitsData from './(handouts)/ChemHandoutsList.json';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'Chemistry Handouts',
+}
 const ChemHandouts = () => {
   const tabsData = unitsData.map(unit => ({
     id: unit.id,

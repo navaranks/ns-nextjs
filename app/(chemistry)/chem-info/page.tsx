@@ -11,9 +11,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Metadata } from "next";
 import Link from "next/link";
 import React from "react";
 
+export const metadata: Metadata = {
+  title: 'Chemistry Info',
+}
 export default function cheminfo() {
   return (
     <main className="flex flex-col px-4 gap-y-4">
