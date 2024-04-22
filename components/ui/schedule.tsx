@@ -14,6 +14,7 @@ interface ScheduleProps {
   isLoading: boolean;
 }
 export interface ScheduleData {
+  season: string;
   tableid: number;
   week: string;
   days: ScheduleDay[];

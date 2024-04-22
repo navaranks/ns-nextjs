@@ -9,7 +9,7 @@ export default function ChemSchedule() {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        fetch('https://script.google.com/macros/s/AKfycbyBJflG-O8fhVoL0xWQc2vYO2vKRAREP-Bbp6TQ9B0rH2aRtIP1czWJcHqwt68z1IphSg/exec')
+        fetch('https://script.google.com/macros/s/AKfycbxb0Kd3Lv15BBKb33s7YUSEyBkGTcB-sl11MuE0xGz_xBn8J7mMvPlKXrCKzW9yXdKEkQ/exec')
             .then(response => response.json())
             .then(data => {
                 setScheduleData(data); // Ensure the API returns data in the expected format

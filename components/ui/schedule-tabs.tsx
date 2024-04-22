@@ -11,21 +11,29 @@ interface ScheduleTabsProps {
 }
 
 export default function ScheduleTabs({ isLoading, scheduleData }: ScheduleTabsProps) {
-  const [selectedTab, setSelectedTab] = useState('spring');
+  const [selectedTab, setSelectedTab] = useState('fall');
+
+  //Filter schedule data based on selected tab
+  const springData = scheduleData?.filter(item => item.season === 'Spring') || [];
+  const fallData = scheduleData?.filter(item => item.season === 'Fall') || [];
+
+  //Determine if tab is disabled
+  const isSpringDataAvailable = springData.length > 0;
+  const isFallDataAvailable = fallData.length > 0;
 
   // Render loading state and allow user interaction with tabs
   if (isLoading) {
     return (
       <Tabs value={selectedTab} onValueChange={setSelectedTab}>
         <TabsList className="w-full justify-between mx-auto h-auto">
-          <TabsTrigger value='spring' className='w-full text-xl data-[state=active]:bg-chem'>Spring</TabsTrigger>
-          <TabsTrigger value='fall' className='w-full text-xl data-[state=active]:bg-chem'>Fall</TabsTrigger>
+          <TabsTrigger value='spring' className='w-full text-xl data-[state=active]:bg-chem' disabled={!isSpringDataAvailable}>Spring</TabsTrigger>
+          <TabsTrigger value='fall' className='w-full text-xl data-[state=active]:bg-chem' disabled={!isFallDataAvailable}>Fall</TabsTrigger>
         </TabsList>
         <TabsContent value='spring'>
           <ScheduleLoading />
         </TabsContent>
         <TabsContent value="fall">
-          <p>Loading Fall data...</p>
+          <ScheduleLoading />
         </TabsContent>
       </Tabs>
     );
@@ -53,17 +61,18 @@ export default function ScheduleTabs({ isLoading, scheduleData }: ScheduleTabsPr
   return (
     <Tabs value={selectedTab} onValueChange={setSelectedTab}>
       <TabsList className="w-full justify-between mx-auto h-auto">
-        <TabsTrigger value='spring' className='w-full text-xl data-[state=active]:bg-chem'>Spring</TabsTrigger>
-        <TabsTrigger value='fall' className='w-full text-xl data-[state=active]:bg-chem'>Fall</TabsTrigger>
+        <TabsTrigger value='spring' className='w-full text-xl data-[state=active]:bg-chem' disabled={!isSpringDataAvailable}>Spring</TabsTrigger>
+        <TabsTrigger value='fall' className='w-full text-xl data-[state=active]:bg-chem' disabled={!isFallDataAvailable}>Fall</TabsTrigger>
       </TabsList>
       <TabsContent value='spring'>
-        {selectedTab === 'spring' && scheduleData.slice().reverse().map((schedule) => (
-          <ScheduleAccordion key={schedule.tableid} schedule={schedule} isLast={schedule.tableid === scheduleData[scheduleData.length - 1].tableid} />
+        {selectedTab === 'spring' && springData.slice().reverse().map((schedule) => (
+          <ScheduleAccordion key={schedule.tableid} schedule={schedule} isLast={schedule.tableid === springData[springData.length - 1].tableid} />
         ))}
       </TabsContent>
       <TabsContent value="fall">
-        {/* Render Fall specific content or iterate similarly if it's based on dynamic data */}
-        <ScheduleLoading />
+        {selectedTab === 'fall' && fallData.slice().reverse().map((schedule) => (
+          <ScheduleAccordion key={schedule.tableid} schedule={schedule} isLast={schedule.tableid === fallData[fallData.length - 1].tableid} />
+        ))}
       </TabsContent>
     </Tabs>
   );
