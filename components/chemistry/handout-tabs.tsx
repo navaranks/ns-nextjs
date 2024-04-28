@@ -37,7 +37,7 @@ const HandoutTabs: React.FC<HandoutTabsProps> = ({ tabsData, borderColor }) => {
     };
 
     return (
-        <div className=" flex flex-col md:flex-row">
+        <div className=" flex flex-col md:flex-row h-96 overflow-y-auto">
             {/* Desktop Tabs */}
             
             <div ref={tabsRef} className="relative hidden md:flex flex-col border-r border-gray-200 ">
