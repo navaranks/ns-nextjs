@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -5,6 +6,8 @@ import {
   CardDescription,
   CardTitle,
 } from "@/components/ui/card";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/newtabs";
 import {
   ChevronRight,
   FlaskRound,
@@ -23,7 +26,7 @@ import React from "react";
 
 function about() {
   return (
-    <div className="bg-[#f4f4f4] py-2 px-4 space-y-4">
+    <div className="bg-[#f4f4f4] py-2 px-4 space-y-4 max-w-screen-2xl">
       <Card className="w-full mx-auto">
         <CardTitle className="text-2xl font-extrabold text-center text-chem pb-1">
           Menu
@@ -168,10 +171,13 @@ function about() {
         </CardTitle>
         <CardContent>
           <div className="w-full hover:bg-gray-100 focus:bg-gray-200 p-2 rounded-md">
-            <Link href={"/about"} className="flex items-center  justify-between">
+            <Link
+              href={"/about"}
+              className="flex items-center  justify-between"
+            >
               <div className="flex items-center">
                 <div className="h-7 w-7 bg-chem rounded-sm  flex justify-center items-center">
-                    <User className="h-5 w-5"  color="white"/>
+                  <User className="h-5 w-5" color="white" />
                 </div>
                 <span className="text-xl ml-2">About Me</span>
               </div>
@@ -179,10 +185,13 @@ function about() {
             </Link>
           </div>
           <div className="w-full hover:bg-gray-100 focus:bg-gray-200 p-2 rounded-md">
-            <Link href={"/about"} className="flex items-center  justify-between">
+            <Link
+              href={"/about"}
+              className="flex items-center  justify-between"
+            >
               <div className="flex items-center">
                 <div className="h-7 w-7 bg-chem rounded-sm  flex justify-center items-center">
-                    <User className="h-5 w-5"  color="white"/>
+                  <User className="h-5 w-5" color="white" />
                 </div>
                 <span className="text-xl ml-2">About Me</span>
               </div>
@@ -190,10 +199,13 @@ function about() {
             </Link>
           </div>
           <div className="w-full hover:bg-gray-100 focus:bg-gray-200 p-2 rounded-md">
-            <Link href={"/about"} className="flex items-center  justify-between">
+            <Link
+              href={"/about"}
+              className="flex items-center  justify-between"
+            >
               <div className="flex items-center">
                 <div className="h-7 w-7 bg-chem rounded-sm  flex justify-center items-center">
-                    <User className="h-5 w-5"  color="white"/>
+                  <User className="h-5 w-5" color="white" />
                 </div>
                 <span className="text-xl ml-2">About Me</span>
               </div>
@@ -201,16 +213,92 @@ function about() {
             </Link>
           </div>
           <div className="w-full hover:bg-gray-100 focus:bg-gray-200 p-2 rounded-md">
-            <Link href={"/about"} className="flex items-center  justify-between">
+            <Link
+              href={"/about"}
+              className="flex items-center  justify-between"
+            >
               <div className="flex items-center">
                 <div className="h-7 w-7 bg-chem rounded-sm  flex justify-center items-center">
-                    <User className="h-5 w-5"  color="white"/>
+                  <User className="h-5 w-5" color="white" />
                 </div>
                 <span className="text-xl ml-2">About Me</span>
               </div>
               <ChevronRight className="mr-2 h-5 w-5" />
             </Link>
           </div>
+        </CardContent>
+      </Card>
+      <Card className="w-full mx-auto">
+        <CardContent className="p-4">
+          <Tabs defaultValue="Unit 1" className="w-full">
+            <ScrollArea>
+              <div className="w-full relative h-10">
+            <TabsList className=" bg-white flex absolute h-10">
+              <TabsTrigger className=" flex-grow justify-center  data-[state=active]:text-black  data-[state=active]:text-extrabold " value="Unit 1">Unit 1</TabsTrigger>
+              <TabsTrigger className=" flex-grow justify-center  data-[state=active]:text-black  data-[state=active]:text-extrabold " value="Unit 2">Unit 2</TabsTrigger>
+              <TabsTrigger className=" flex-grow justify-center  data-[state=active]:text-black  data-[state=active]:text-extrabold " value="Unit 3">Unit 3</TabsTrigger>
+              <TabsTrigger className=" flex-grow justify-center  data-[state=active]:text-black  data-[state=active]:text-extrabold " value="Unit 4">Unit 4</TabsTrigger>
+              <TabsTrigger className=" flex-grow justify-center  data-[state=active]:text-black  data-[state=active]:text-extrabold " value="Unit 5">Unit 5</TabsTrigger>
+              <TabsTrigger className=" flex-grow justify-center  data-[state=active]:text-black  data-[state=active]:text-extrabold " value="Unit 6">Unit 6</TabsTrigger>
+              <TabsTrigger className=" flex-grow justify-center  data-[state=active]:text-black  data-[state=active]:text-extrabold " value="Unit 7">Unit 7</TabsTrigger>
+              <TabsTrigger className=" flex-grow justify-center  data-[state=active]:text-black  data-[state=active]:text-extrabold " value="Unit 8">Unit 8</TabsTrigger>
+              <TabsTrigger className=" flex-grow justify-center  data-[state=active]:text-black  data-[state=active]:text-extrabold " value="Unit 9">Unit 9</TabsTrigger>
+              <TabsTrigger className=" flex-grow justify-center  data-[state=active]:text-black  data-[state=active]:text-extrabold " value="Unit 10">Unit 10</TabsTrigger>
+              <TabsTrigger className=" flex-grow justify-center  data-[state=active]:text-black  data-[state=active]:text-extrabold " value="Unit 11">Unit 11</TabsTrigger>
+              <TabsTrigger className=" flex-grow justify-center  data-[state=active]:text-black  data-[state=active]:text-extrabold " value="Unit 12">Unit 12</TabsTrigger>
+              <TabsTrigger className=" flex-grow justify-center  data-[state=active]:text-black  data-[state=active]:text-extrabold " value="Unit 13">Unit 13</TabsTrigger>
+              <TabsTrigger className=" flex-grow justify-center  data-[state=active]:text-black  data-[state=active]:text-extrabold " value="Unit 14">Unit 14</TabsTrigger>
+              <TabsTrigger className=" flex-grow justify-center  data-[state=active]:text-black  data-[state=active]:text-extrabold " value="Unit 15">Unit 15</TabsTrigger>
+            </TabsList>
+            </div>
+            <ScrollBar orientation="horizontal" />
+            </ScrollArea>
+            <TabsContent value="Unit 1">
+             Unit 1 Content
+            </TabsContent>
+            <TabsContent value="Unit 2">
+              Unit 2 Content
+            </TabsContent>
+            <TabsContent value="Unit 3">
+              Unit 3 Content
+            </TabsContent>
+            <TabsContent value="Unit 4">
+              Unit 4 Content
+            </TabsContent>
+            <TabsContent value="Unit 5">
+              Unit 5 Content
+            </TabsContent>
+            <TabsContent value="Unit 6">
+              Unit 6 Content
+            </TabsContent>
+            <TabsContent value="Unit 7">
+              Unit 7 Content
+            </TabsContent>
+            <TabsContent value="Unit 8">
+              Unit 8 Content
+            </TabsContent>
+            <TabsContent value="Unit 9">
+              Unit 9 Content
+            </TabsContent>
+            <TabsContent value="Unit 10">
+              Unit 10 Content
+            </TabsContent>
+            <TabsContent value="Unit 11">
+              Unit 11 Content
+            </TabsContent>
+            <TabsContent value="Unit 12">
+              Unit 12 Content
+            </TabsContent>
+            <TabsContent value="Unit 13">
+              Unit 13 Content
+            </TabsContent>
+            <TabsContent value="Unit 14">
+              Unit 14 Content
+            </TabsContent>
+            <TabsContent value="Unit 15">
+              Unit 15 Content
+            </TabsContent>
+          </Tabs>
         </CardContent>
       </Card>
     </div>

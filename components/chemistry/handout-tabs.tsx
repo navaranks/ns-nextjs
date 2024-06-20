@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState, useRef } from "react";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem, SelectGroup, SelectLabel } from "../ui/select";
-import { ScrollArea } from "../ui/scroll-area";
+import { ScrollArea, ScrollBar } from "../ui/scroll-area";
 
 
 interface TabData {
@@ -41,7 +41,10 @@ const HandoutTabs: React.FC<HandoutTabsProps> = ({ tabsData, borderColor }) => {
             {/* Desktop Tabs */}
             
             <div ref={tabsRef} className="relative hidden md:flex flex-col border-r border-gray-200 ">
-                <div ref={indicatorRef} className={`absolute right-0 border-r-4 ${borderColor} transition-all duration-300`}></div>
+                {/* <div ref={indicatorRef} className={`absolute right-0 border-r-4 ${borderColor} transition-all duration-300`}></div> */}
+                
+                <ScrollArea>
+                <div className="flex flex-col">
                 {tabsData.map((tab) => (
                     <button
                         key={tab.id}
@@ -52,6 +55,9 @@ const HandoutTabs: React.FC<HandoutTabsProps> = ({ tabsData, borderColor }) => {
                     </button>
                     
                 ))}
+                </div>
+                <ScrollBar orientation="vertical" />
+                </ScrollArea>
             </div>
             
            
