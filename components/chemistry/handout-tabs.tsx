@@ -1,8 +1,7 @@
 "use client";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useLayoutEffect, useState, useRef, useCallback } from "react";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem, SelectGroup, SelectLabel } from "../ui/select";
-import { ScrollArea, ScrollBar } from "../ui/scroll-area";
-
+import { ScrollArea } from "../ui/scroll-area";
 
 interface TabData {
     id: number;
@@ -15,66 +14,69 @@ interface HandoutTabsProps {
     tabsData: TabData[];
     borderColor: string;
 }
+
 const HandoutTabs: React.FC<HandoutTabsProps> = ({ tabsData, borderColor }) => {
-   
-    const [value, setValue] = useState<number>(0);
+    const [value, setValue] = useState<number>(tabsData[0].id); // Initialize with the id of the first tab
     const tabsRef = useRef<HTMLDivElement>(null);
     const indicatorRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
+    const updateIndicatorPosition = useCallback(() => {
         if (tabsRef.current && indicatorRef.current) {
-            const tabs= tabsRef.current.children;
-            const activeTab = tabs[value + 1] as HTMLElement;
-            indicatorRef.current.style.top= `${activeTab.offsetTop }px`;
-            indicatorRef.current.style.height= `${activeTab.clientHeight}px`;
-    }
-
+            // Find the active tab based on 'data-id' attribute matching the 'value'
+            const activeTab = Array.from(tabsRef.current.children).find(child => child.getAttribute('data-id') === value.toString()) as HTMLElement;
+            if (activeTab) {
+                indicatorRef.current.style.top = `${activeTab.offsetTop}px`;
+                indicatorRef.current.style.height = `${activeTab.clientHeight}px`;
+            }
+        }
     }, [value]);
 
-    const handleChange = (index: number) => {
-        setValue(index);
-        
+    useLayoutEffect(() => {
+        updateIndicatorPosition();
+        // Add resize event listener to update position on window resize
+        const handleResize = () => {
+            updateIndicatorPosition();
+        };
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [updateIndicatorPosition]);
+
+    const handleChange = (id: number) => {
+        setValue(id);
     };
 
     return (
-        <div className=" flex flex-col md:flex-row h-96 overflow-y-auto">
+        <div className="flex flex-col md:flex-row">
             {/* Desktop Tabs */}
-            
-            <div ref={tabsRef} className="relative hidden md:flex flex-col border-r border-gray-200 ">
-                {/* <div ref={indicatorRef} className={`absolute right-0 border-r-4 ${borderColor} transition-all duration-300`}></div> */}
-                
-                <ScrollArea>
-                <div className="flex flex-col">
-                {tabsData.map((tab) => (
+            <div ref={tabsRef} className="relative hidden md:flex flex-col border-r border-gray-200">
+                <div ref={indicatorRef} className={`absolute right-0 border-r-4 ${borderColor} transition-all duration-300`}></div>
+                {tabsData.map((tab, index) => (
                     <button
                         key={tab.id}
-                        className={`px-4 py-5 w-24 h-20 flex-grow justify-center hover:rounded-lg hover:bg-red-50 hover:via-red-900 hover:to-red-800 active:shadow-[-1px_0px_1px_0px_#b7323f_inset,1px_0px_1px_0px_#b7323f_inset,0px_0.125rem_1px_0px_#c73a4d_inset]  ${value === tab.id ? 'font-extrabold ' : ''}`}
+                        data-id={tab.id.toString()}
+                        className={`px-4 py-5 w-24 h-20 flex-grow justify-center hover:rounded-lg hover:bg-red-50 hover:via-red-900 hover:to-red-800 active:shadow-[-1px_0px_1px_0px_#b7323f_inset,1px_0px_1px_0px_#b7323f_inset,0px_0.125rem_1px_0px_#c73a4d_inset] ${value === tab.id ? 'font-extrabold' : ''}`}
                         onClick={() => handleChange(tab.id)}
                     >
                         {tab.title}
                     </button>
-                    
                 ))}
-                </div>
-                <ScrollBar orientation="vertical" />
-                </ScrollArea>
             </div>
-            
-           
 
             {/* Mobile Selector */}
-            <Select value={tabsData[value].id.toString()} onValueChange={(val: string) => handleChange(parseInt(val))}>
+            <Select value={value.toString()} onValueChange={(val) => handleChange(parseInt(val))}>
                 <SelectTrigger className="md:hidden">
-                    <SelectValue>{tabsData[value].title + ' - ' + tabsData[value].subtitle}</SelectValue>
+                    <SelectValue>{tabsData.find(tab => tab.id === value)?.title + ' - ' + tabsData.find(tab => tab.id === value)?.subtitle}</SelectValue>
                 </SelectTrigger>
                 <SelectContent>
                     <SelectGroup>
                         <SelectLabel>Handouts for</SelectLabel>
-                    {tabsData.map((tab) => (
-                        <SelectItem key={tab.id} value={tab.id.toString()}>
-                            {tab.title + ' - ' + tab.subtitle} 
-                        </SelectItem>
-                    ))}
+                        {tabsData.map((tab) => (
+                            <SelectItem key={tab.id} value={tab.id.toString()}>
+                                {tab.title + ' - ' + tab.subtitle}
+                            </SelectItem>
+                        ))}
                     </SelectGroup>
                 </SelectContent>
             </Select>
@@ -82,7 +84,7 @@ const HandoutTabs: React.FC<HandoutTabsProps> = ({ tabsData, borderColor }) => {
             {/* Content */}
             <div className="flex-grow py-4 md:p-4">
                 <ScrollArea className="h-full">
-                {tabsData[value].content}
+                    {tabsData.find(tab => tab.id === value)?.content}
                 </ScrollArea>
             </div>
         </div>
